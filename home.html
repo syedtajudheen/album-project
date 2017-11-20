@@ -1,18 +1,24 @@
 <!DOCTYPE HTML>
 <HTML>
     <head>
-        <link type="text/css" rel="stylesheet" href="themes/classic/galleria.classic.css">
-    <script type="text/javascript" src="galleria-1.5.7.min.js"></script>
-    <script type="text/javascript" src="themes/classic/galleria.classic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
-    	 <script src="script.js"></script> 
-         <style type="text/css" media="screen">
+
+            <link type="text/css" rel="stylesheet" href="themes/classic/galleria.classic.css">
+            <script type="text/javascript" src="galleria-1.5.7.min.js"></script>
+            <script type="text/javascript" src="themes/classic/galleria.classic.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         
+                 <script src="script.js"></script> 
+                 <style type="text/css" media="screen">
              img{
                 width: 300px;
                 height: 270px;
                 padding-bottom: 17px;
                 padding-right:20px;
              }
+             #galleria{
+                height:600px;
+            }
+          
          </style>
     </head>
     <body>
@@ -20,17 +26,23 @@
            <div  class="container-fluid text-center" >            
       
                         <div  class="row">
-                            <div  class="col-lg-12"   id="gallery">
-                            	<a href="#" id="albums" onclick="getalbumid2()"></a><!-- <img src="" data-id="" alt="">    -->                                    
+                            <div  class="col-lg-12"  id="galleria"  >
+                                <a href="#"  id="albums" id="click"  onclick="getalbumid2()"></a>
+                               <!-- <img src="" data-id="" alt="">    -->                                  
                             </div>
     
                         </div >
-                        <div id="aaa">
-                         <!--  <img src="" alt="">  -->
-                        </div>
-                        
-                       
-                        
+                        <div >
+                                <a  href="#" id="aaa"></a>
+                               
+                          </div>
+                    <script>
+                   
+                    $('#click').click(function() {
+                    $('#photopage').load("photos.html");
+                    }); 
+                    
+                    </script>
                          
                </div> 
                

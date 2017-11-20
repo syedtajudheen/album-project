@@ -1,5 +1,11 @@
+
+
+
+
 const album_url="https://jsonplaceholder.typicode.com/albums/";
+const album_url2="https://jsonplaceholder.typicode.com/albums/";
 const album_photo="/photos/";
+const album_photo2="/photos/";
 
 $(document).ready(function(){
 getalbumid();
@@ -37,8 +43,9 @@ getalbumid();
 																	//console.log(albumphoto);
 																	// $('#albums').attr('<src="'+albumphoto+'">');
 																	 
-																	 $("#albums").append("<img   src='"+albumphoto+"'/>");
-																});
+																	$("#albums").append("<img   src='"+albumphoto+"'/>");
+																	
+																	});
 															
 															});
 															
@@ -49,35 +56,38 @@ getalbumid();
 
 
 											function getalbumid2() {
-												          		$.getJSON( album_url, function(data) {
-																					$.each(data.slice(0,12), function(key, value) {
+												$('#photopage' ).load("photos.html");
+												Galleria.loadTheme('galleria/themes/classic/galleria.classic.js');
+												Galleria.run('#galleria');
 
-																						var albumid2 = value.id;
-																						
-																							getphotos(albumid2);
-																							 
+												
+												          		$.getJSON( album_url2, function(data) {
+																	$.each(data.slice(0,12), function(key, value) {
+
+																			var albumid2 = value.id;
+																			getphotos(albumid2);
+																			
 																				
-																					});
+																	});
 													          	});
-										 }
+									    	 }
 										    
 								
 		
-	function getphotos(albumid2) {
+											function getphotos(albumid2) {
 					                            // var albumid1= 1;
-															var link2 =album_url + albumid2 + album_photo;
+															var link2 =album_url2 + albumid2 + album_photo2;
 															 $.getJSON(link2, function(data){
-																		$.each(data.slice(0,1),function(key, value) {
+																		$.each(data.slice(0,2),function(key, value) {
 																									var photos = value.url;
 																									console.log(photos);
 																									$("#aaa").append("<img  src='"+photos+"'/>");
-																										 Galleria.loadTheme('themes/classic/galleria.classic.min.js');
-                                                                                                         Galleria.run('#gallery');
+																										 
 																									 
 																								});
 															
-					                             });
-					            	}
+					                           				  });
+					       			     	}
 
 
 

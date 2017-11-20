@@ -9,7 +9,11 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
             <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
+            <link rel="stylesheet" href="galleria/themes/classic/galleria.classic.css">
+            <script src="galleria/themes/classic/galleria.classic.min.js"></script>
+            <script src="script.js"></script> 
+            
      <title>Album Gallery</title>
     </head>
              <body>
@@ -24,13 +28,12 @@
                  
                  <div id="hm"></div>
            <script>
-            $('#hm').load("home.html");
-                                            
-            // $(document).ready(function(){
-            // $('#albums').click(function() {
-            // $('#demo' ).load("photos.html");
-            //   }); 
-            // });
+        $('#hm').load("home.html");
+
+ 
+        $('#click').click(function() {
+                    $('#photopage').load("photos.html");
+                    }); 
                  
             </script> 
           </body>
